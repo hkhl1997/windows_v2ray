@@ -16,7 +16,7 @@ public class FileDownloader
     private long _downloadedSize;
     private readonly object _lock = new object();
 
-    public FileDownloader(string url, string savePath, int threadCount = 4)
+    public FileDownloader(string url, string savePath, int threadCount = 1)
     {
         _url = url;
         _savePath = savePath;

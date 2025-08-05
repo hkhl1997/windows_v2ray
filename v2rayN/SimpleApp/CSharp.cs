@@ -41,6 +41,7 @@ namespace SimpleApp
 
         private static readonly string cookieFilePath = "cookies.json";
         private static readonly PersistentCookieManager cookieManager = new PersistentCookieManager(cookieFilePath);
+        private static string domain = "c1.cxnbgj.com";
 
         private CSharp() {
 
@@ -177,7 +178,7 @@ namespace SimpleApp
 
                 Log.Information($"Start...............line.Type{line.Type}     line.Code {line.Code}     line.Id{line.Id.ToString()}      line.EndTime{line.EndTime}      line.Mode{line.Mode.ToString()}      line.BackMainland{line.BackMainland.ToString()}    json {json}");
 
-                node.Id = GenerateEncodedDomainConfig(line.Type, line.Code, line.Id.ToString(), line.EndTime, line.Mode.ToString(), line.BackMainland.ToString(), json);
+                node.Id = GenerateEncodedDomainConfig(line.Type, line.Code, line.Id.ToString(), line.EndTime, line.Mode.ToString(), line.BackMainland.ToString(), CSharp.domain ,json);
                 node.IndexId = "1";
                 node.IsSub = true;
                 node.Port = 3388;
@@ -308,6 +309,7 @@ namespace SimpleApp
             string expire,
             string mode,
             string backMainland,
+            string apiDomain,
             string jsonString)
         {
             try
@@ -326,7 +328,8 @@ namespace SimpleApp
                     .Append(expire).Append('#')
                     .Append(mode).Append('#')
                     .Append(backMainland).Append('#')
-                    .Append(primaryDomain);
+                    .Append(primaryDomain).Append('#')
+                    .Append(apiDomain);
 
                 // Process backlines if present
                 if (jsonString.ToLower().Contains("\"backlines\""))
@@ -351,7 +354,8 @@ namespace SimpleApp
                             .Append(expire).Append('#')
                             .Append(mode).Append('#')
                             .Append(backMainland).Append('#')
-                            .Append(domain);
+                            .Append(domain).Append('#')
+                            .Append(apiDomain);
                     }
                 }
 
@@ -392,7 +396,7 @@ namespace SimpleApp
 
             try
             {
-                string method = $"setAppVersion('2.0', 'windows','','wm004')";
+                string method = $"setAppVersion('2.0', 'windows','','')";
 
                 await Global.SingleTon.WebView.CoreWebView2.ExecuteScriptAsync(method);
             }
@@ -412,6 +416,39 @@ namespace SimpleApp
             //    Global.SingleTon.ViewModel.ChangeRouteModelAsync(false);
             //}
         }
+
+        public async void setUserNo(string json)
+        {
+            //string name = JsonDocument.Parse(json)
+            //                          .RootElement
+            //                          .GetProperty("name")
+            //                          .GetString()!;
+            string url = $"https://{CSharp.domain}/client/packet";
+
+
+            using var http = new HttpClient();          // 建议长期复用，但演示里用 using 即可
+
+            http.DefaultRequestHeaders.Add("accept-source", GetSid());
+
+            string content = await http.GetStringAsync(url);   // 异步获取文本
+
+            var info = JsonSerializer.Deserialize<PackInfo>(content);
+
+            Debug.WriteLine(content);
+        }
+
+        public void setApiDomain(string domain)
+        {
+            CSharp.domain = domain;
+            //string name = JsonDocument.Parse(json)
+            //                          .RootElement
+            //                          .GetProperty("name")
+            //                          .GetString()!;
+
+
+
+        }
+        
 
         public async void httpGetAsync(string url, string success, string error)
         {
@@ -645,5 +682,20 @@ namespace SimpleApp
     {
         [JsonPropertyName("update_url")]
         public string UpdateUrl { get; set; }
+    }
+
+    public class PackInfo
+    {
+        [JsonPropertyName("sha256")]
+        public string Sha256 { get; set; } = default!;
+
+        [JsonPropertyName("rule")]
+        public string Rule { get; set; } = default!;
+
+        [JsonPropertyName("ip_ranges")]
+        public string IpRanges { get; set; } = default!;
+
+        [JsonPropertyName("dl_url")]
+        public string DownloadUrl { get; set; } = default!;
     }
 }

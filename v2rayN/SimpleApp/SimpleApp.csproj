@@ -38,12 +38,16 @@
     <None Remove="h5\static\images\flags\ruishi.png" />
     <None Remove="h5\static\images\flags\taiguo.png" />
     <None Remove="h5\static\images\flags\tuerqi.png" />
+    <None Remove="h5\static\images\flags\wukelan.png" />
+    <None Remove="h5\static\images\flags\xibanya.png" />
     <None Remove="h5\static\images\flags\xinjiapo.png" />
     <None Remove="h5\static\images\flags\yidali.png" />
     <None Remove="h5\static\images\flags\yindu.png" />
     <None Remove="h5\static\images\flags\yindunixiya.png" />
     <None Remove="h5\static\images\flags\yingguo.png" />
+    <None Remove="h5\static\images\flags\yiselie.png" />
     <None Remove="h5\static\images\flags\yuenan.png" />
+    <None Remove="h5\static\images\flags\zhongguo.png" />
     <None Remove="h5\static\index.2da1efab.css" />
     <None Remove="h5\static\js\263.js" />
     <None Remove="h5\static\js\761.js" />
@@ -143,6 +147,12 @@
     <EmbeddedResource Include="h5\static\images\flags\tuerqi.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\wukelan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\xibanya.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="h5\static\images\flags\xinjiapo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -158,7 +168,13 @@
     <EmbeddedResource Include="h5\static\images\flags\yingguo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\yiselie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="h5\static\images\flags\yuenan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\zhongguo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="h5\static\index.2da1efab.css">
