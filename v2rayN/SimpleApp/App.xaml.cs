@@ -15,6 +15,7 @@ namespace SimpleApp;
 /// </summary>
 public partial class App : Application
 {
+
     private const string UniqueEventName = "Yunbao_UniqueEventName";
 
     private EventWaitHandle eventWaitHandle;
@@ -38,9 +39,11 @@ public partial class App : Application
             base.OnStartup(e);
 
 
+
             try
             {
                 _ = ProxySettingWindows.UnsetProxy();
+
 
                 Log.Logger = new LoggerConfiguration()
                 .WriteTo.Console() // 可选：输出到控制台
@@ -56,6 +59,7 @@ public partial class App : Application
             {
                 Log.Error(ex.ToString());
             }
+
 
             this.SessionEnding += App_SessionEnding;
             AppDomain.CurrentDomain.ProcessExit += (s, e) =>
@@ -120,7 +124,6 @@ public partial class App : Application
             }
         });
     }
-
     private void App_SessionEnding(object sender, SessionEndingCancelEventArgs e)
     {
         _ = ProxySettingWindows.UnsetProxy();
