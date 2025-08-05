@@ -1,0 +1,236 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+    <ApplicationIcon>main.ico</ApplicationIcon>
+    <AssemblyName>YunBao</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="h5\index.html" />
+    <None Remove="h5\static\images\bg-world-map.png" />
+    <None Remove="h5\static\images\flags\agenting.png" />
+    <None Remove="h5\static\images\flags\aierlan.png" />
+    <None Remove="h5\static\images\flags\aodaliya.png" />
+    <None Remove="h5\static\images\flags\baxi.png" />
+    <None Remove="h5\static\images\flags\bolan.png" />
+    <None Remove="h5\static\images\flags\deguo.png" />
+    <None Remove="h5\static\images\flags\eluosi.png" />
+    <None Remove="h5\static\images\flags\faguo.png" />
+    <None Remove="h5\static\images\flags\feilvbin.png" />
+    <None Remove="h5\static\images\flags\hanguo.png" />
+    <None Remove="h5\static\images\flags\helan.png" />
+    <None Remove="h5\static\images\flags\hongkong.png" />
+    <None Remove="h5\static\images\flags\jianada.png" />
+    <None Remove="h5\static\images\flags\malaixiya.png" />
+    <None Remove="h5\static\images\flags\meiguo.png" />
+    <None Remove="h5\static\images\flags\moxige.png" />
+    <None Remove="h5\static\images\flags\niriliya.png" />
+    <None Remove="h5\static\images\flags\nuowei.png" />
+    <None Remove="h5\static\images\flags\riben.png" />
+    <None Remove="h5\static\images\flags\ruidian.png" />
+    <None Remove="h5\static\images\flags\ruishi.png" />
+    <None Remove="h5\static\images\flags\taiguo.png" />
+    <None Remove="h5\static\images\flags\tuerqi.png" />
+    <None Remove="h5\static\images\flags\wukelan.png" />
+    <None Remove="h5\static\images\flags\xibanya.png" />
+    <None Remove="h5\static\images\flags\xinjiapo.png" />
+    <None Remove="h5\static\images\flags\yidali.png" />
+    <None Remove="h5\static\images\flags\yindu.png" />
+    <None Remove="h5\static\images\flags\yindunixiya.png" />
+    <None Remove="h5\static\images\flags\yingguo.png" />
+    <None Remove="h5\static\images\flags\yiselie.png" />
+    <None Remove="h5\static\images\flags\yuenan.png" />
+    <None Remove="h5\static\images\flags\zhongguo.png" />
+    <None Remove="h5\static\index.2da1efab.css" />
+    <None Remove="h5\static\js\263.js" />
+    <None Remove="h5\static\js\761.js" />
+    <None Remove="h5\static\js\chunk-vendors.js" />
+    <None Remove="h5\static\js\index.js" />
+    <None Remove="h5\static\js\pages-common-language.js" />
+    <None Remove="h5\static\js\pages-common-login.js" />
+    <None Remove="h5\static\js\pages-common-register.js" />
+    <None Remove="h5\static\js\pages-common-webim.js" />
+    <None Remove="h5\static\js\pages-index-index.js" />
+    <None Remove="h5\static\js\pages-index-purchase.js" />
+    <None Remove="h5\static\js\pages-user-account.js" />
+    <None Remove="h5\static\js\pages-user-deletion.js" />
+    <None Remove="h5\static\js\pages-user-password.js" />
+    <None Remove="main.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="main.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="h5\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\bg-world-map.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\agenting.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\aierlan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\aodaliya.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\baxi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\bolan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\deguo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\eluosi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\faguo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\feilvbin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\hanguo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\helan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\hongkong.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\jianada.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\malaixiya.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\meiguo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\moxige.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\niriliya.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\nuowei.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\riben.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\ruidian.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\ruishi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\taiguo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\tuerqi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\wukelan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\xibanya.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\xinjiapo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\yidali.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\yindu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\yindunixiya.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\yingguo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\yiselie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\yuenan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\images\flags\zhongguo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\index.2da1efab.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\js\263.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\js\761.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\js\chunk-vendors.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\js\index.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\js\pages-common-language.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\js\pages-common-login.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\js\pages-common-register.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\js\pages-common-webim.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\js\pages-index-index.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\js\pages-index-purchase.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\js\pages-user-account.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\js\pages-user-deletion.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h5\static\js\pages-user-password.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" />
+    <PackageReference Include="Serilog" />
+    <PackageReference Include="Serilog.Sinks.Console" />
+    <PackageReference Include="Serilog.Sinks.File" />
+    <PackageReference Include="System.Management" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceLib\ServiceLib.csproj" />
+  </ItemGroup>
+
+</Project>
